@@ -1,0 +1,28 @@
+@keyframes move-down {
+  0% {
+    transform: translateY(-5rem);
+    z-index: 11;
+  }
+  100% {
+    transform: translateY(7rem);
+    z-index: 11;
+  }
+}
+
+@keyframes move-up {
+  0% {
+    transform: translateY(9rem);
+    z-index: 10;
+  }
+
+  100% {
+    transform: translateY(0rem);
+    z-index: 10;
+  }
+}
+
+@keyframes scale{
+  to{
+    transform: scale(1.01);
+  }
+}

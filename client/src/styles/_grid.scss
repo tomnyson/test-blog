@@ -1,0 +1,59 @@
+@import "./variables";
+@import './animation';
+
+.grid {
+  height: auto;
+  width: auto;
+  display: grid;
+  text-align: center;
+
+  &--blogs{
+    grid-template-rows: auto;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 2rem;
+    column-gap: 3rem;
+  }
+
+  &--home {
+    grid-template-rows: repeat(2, 5rem);
+    grid-template-columns: repeat(3, 11rem);
+    row-gap: 2rem;
+    column-gap: 2rem;
+
+    padding: 3rem;
+
+    // animation: move-up 1s ease-in-out forwards;
+    
+    border-radius: 1rem;
+    background-color: rgba($color-white, $alpha: .1);
+    box-shadow: 0 0rem 1rem 2rem rgba($color-primary-dark, .3);
+  }
+
+  &--resume {
+    grid-template: repeat(4, auto) / (3fr 1fr 3fr);
+    row-gap: 3rem;
+    column-gap: 4rem;
+  }
+
+  &__item {
+    position: relative;
+    
+    &--icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &--left {
+      display: flex;
+      justify-content: end;
+      align-items: center;
+    }
+
+    &--right {
+      display: flex;
+      justify-content: start;
+      align-items: center;
+    }
+  }
+}

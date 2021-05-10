@@ -1,0 +1,53 @@
+@import "./variables";
+
+.menu {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: block;
+
+  &__nav {
+    position: absolute;
+    top: 20%;
+    right: 50%;
+
+    & button {
+        position: absolute;
+        left: calc(50% - 10px);
+        top: 25px;
+        opacity: 0;
+        visibility: hidden;
+    
+        transition: opacity 0.2s linear, top 0.2s linear, left 0.2s linear,
+          visibility 0.2s linear;
+      }
+  }
+
+  &__open{
+    display: none;
+
+      &:clicked ~ .menu {
+
+        & button {
+          visibility: visible;
+          opacity: 1;
+        }
+        & button:nth-child(1) {
+          left: calc(50% - 50px);
+          top: 32px;
+        }
+        & button:nth-child(2) {
+          left: calc(50% - 37.28px);
+          top: 57.28px;
+        }
+        & button:nth-child(3) {
+          left: calc(50% - 10px);
+          top: 67px;
+        }
+      }
+  }
+
+  &__button{
+      display: block;
+  }
+}

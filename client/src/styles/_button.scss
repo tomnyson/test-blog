@@ -1,0 +1,52 @@
+@import './variables';
+
+.button{
+    outline: none;
+    border: none;
+    background-color: transparent;
+    text-align: center;
+    border-radius: 1rem;
+    height: 5rem;
+    width: 100%;
+
+    &--side-bar{
+        font-size: 2rem;
+        text-transform: capitalize;
+        color: rgba($color-primary-dark, 1);
+    }
+
+    &--icon{
+        color: rgba($color-secondary, .8);
+
+        &:hover{
+            color: rgba($color-secondary-dark, .95);
+        }
+    }
+
+    &--text{
+        font-size: 1.5rem;
+        text-decoration: none;
+        vertical-align: middle;
+        color: $color-secondary;
+        font-family: 'Noto Sans HK', sans-serif;  
+        text-transform: uppercase;
+
+        &:hover{
+            background-color: rgba($color-white, .08);
+            font-weight: bold;
+        }
+    }
+
+    &--menu{
+        display: inline-block;
+        cursor: pointer;
+        font-size: 0rem;
+
+        &:before {
+            position: absolute;
+            top: 3px;
+            color: #2020a0;
+            font-size: 16px;
+          }
+    }
+}

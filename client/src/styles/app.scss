@@ -1,0 +1,71 @@
+@import "./variables";
+@import './grid';
+@import './pages.scss';
+@import './button';
+@import './menu.scss';
+@import './animation';
+@import './sidebar';
+@import './utils';
+
+
+@media (max-width: 320px) {
+  html {
+    font-size: 10%;
+  }
+}
+
+@media (min-width: 320px) {
+  html {
+    font-size: 27%;
+  }
+}
+
+@media (min-width: 480px) {
+  html {
+    font-size: 30%;
+  }
+}
+
+@media (min-width: 600px) {
+  html {
+    font-size: 37.5%;
+  }
+}
+
+@media (min-width: 801px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media (min-width: 1025px) {
+  html {
+    font-size: 62.5%;
+  }
+}
+
+@media (min-width: 1281px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+html{
+  background-color: $color-primary;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: 'Noto Sans HK', sans-serif;}
+
+main {
+  min-height: 100vh;
+} 
