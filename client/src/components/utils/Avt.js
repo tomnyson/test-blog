@@ -6,8 +6,8 @@ const Avt = ({size}) => {
     return (
         <Avatar
             alt="avatar"
-            src="/images/avatar.jpg"
-            className={`${size}`}
+            src='/images/avatar.jpg'
+            className={`avatar avatar--${size}`}
           />
     );
 };

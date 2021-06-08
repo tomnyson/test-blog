@@ -16,7 +16,8 @@
     width: 100%;
     height: auto;
     padding: 2rem 3rem 6rem 3rem;
-    background-color:rgba($color-white, .8);
+
+    background-color:rgba($color-white, .65);
     box-shadow: 0 0rem 2rem 1rem rgba($color-primary-dark, 0.1);
   }
 
@@ -54,12 +55,14 @@
     box-shadow: 0 0rem 2rem 1rem rgba($color-primary-dark, 0.1);
 
     border-radius: 1rem;
+    cursor: pointer;
+    text-transform: capitalize;
 
-    height: auto;
-    max-height: 42%;
+    height: 20rem;
+    animation: scale-out-1 500ms ease-in-out forwards;
 
     &:hover {
-      animation: scale 300ms ease-in-out forwards;
+      animation: scale-in-1 500ms ease-in-out forwards;
     }
   }
 
@@ -82,7 +85,7 @@
     -webkit-box-orient: vertical;
     display: -webkit-box;
 
-    background-color: rgba($color-white, .6);
+    background-color: rgba($color-white, .8);
     color: rgba($color-primary-dark, 1);
     box-shadow: 0rem -0.5rem 0.5rem rgba($color-primary-dark, 0.2);
   }
@@ -126,12 +129,14 @@
   height: 100%;
 
   &__wrapper {
-    background-color: rgba($color-white, 0.95);
+    background-color: rgba($color-white, 0.65);
+    color:rgba($color-waves-dark,1);
+
     margin: 2rem 3rem 2rem 3rem;
     padding: 10rem 6rem;
+    border-radius: 1rem;
     width: auto;
-    height: auto;
-    min-height: 90vh;
+    min-height: calc(100vh - 4rem);
   }
 
   &__content {
@@ -141,12 +146,17 @@
 }
 
 .resume {
-  margin: 2rem 3rem 2rem 3rem;
-  font-size: 1.8rem;
-  color: rgba($color-primary-dark, 1);
   position: relative;
-  background-color: rgba($color-white, 0.95);
+
+  margin: 2rem 3rem;
+  font-size: 1.8rem;
   padding: 10rem 3rem;
+  border-radius: 1rem;
+
+  color: rgba($color-waves-dark, 1);
+  background-color: rgba($color-white, 0.65 );
+  
+  height: auto;
 
   &__middle-line {
     position: absolute;

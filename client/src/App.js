@@ -15,8 +15,8 @@ function App() {
         <Route path='/' exact component={Home}/>
         <Route path='/about' component={About}/>
         <Route path='/resume' component={Resume}/>
-        <Route path='/quotes' component={Quotes}/>
-        <Route path='/blogs' component={Blogs}/>
+        <Route path='/more/quotes' component={Quotes}/>
+        <Route path='/more/blogs' component={Blogs}/>
       </BrowserRouter>
     </div>
   );

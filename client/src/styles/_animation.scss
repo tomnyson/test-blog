@@ -1,3 +1,5 @@
+@import './mixin';
+
 @keyframes move-down {
   0% {
     transform: translateY(-5rem);
@@ -20,9 +22,33 @@
     z-index: 10;
   }
 }
+    
+@include scale-in-animation(scale-in, 1.1);
+@include scale-out-animation(scale-out, 1.1);
 
-@keyframes scale{
-  to{
-    transform: scale(1.01);
-  }
-}
+@include scale-in-animation(scale-in-1, 1.05);
+@include scale-out-animation(scale-out-1, 1.05);
+
+@include move-in-animation(move-in-1, -27rem);
+@include move-out-animation(move-out-1, -27rem);
+
+@include move-in-animation(move-in-2, -18rem);
+@include move-out-animation(move-out-2, -18rem);
+
+@include move-in-animation(move-in-3, -9rem);
+@include move-out-animation(move-out-3, -9rem);
+
+@include move-cross-animation(move-cross8,65vw, -105vh, 5deg);
+@include move-cross-animation(move-cross1,50vw, -105vh ,10deg);
+@include move-cross-animation(move-cross9,70vw,-105vh, 15deg);
+@include move-cross-animation(move-cross2,60vw,-105vh, 20deg);
+@include move-cross-animation(move-cross3,73vw,-105vh, 25deg);
+@include move-cross-animation(move-cross10,105vw,-100vh, 28deg);
+@include move-cross-animation(move-cross4,98vw,-105vh , 30deg);
+@include move-cross-animation(move-cross5,105vw,-88vh, 35deg);
+@include move-cross-animation(move-cross6,105vw,-75vh, 40deg);
+@include move-cross-animation(move-cross7,105vw,-63vh, 46deg);
+@include move-cross-animation(move-cross11,105vw,-53vh, 57deg);
+@include move-cross-animation(move-cross12,105vw,-40vh, 70deg);
+
+ 

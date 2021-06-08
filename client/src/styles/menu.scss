@@ -1,53 +1,108 @@
 @import "./variables";
+@import "./animation";
 
 .menu {
   position: absolute;
-  bottom: 0;
-  right: 0;
-  display: block;
+  bottom: 4rem;
+  right: 4rem;
+  width: auto;
+  height: auto;
+  z-index: 10;
 
-  &__nav {
+  &__wrapper{
+    position: relative;
+  }
+
+  &__position{
+    position: fixed;
+  }
+
+  &__avatar {
+    cursor: pointer;
     position: absolute;
-    top: 20%;
-    right: 50%;
-
-    & button {
-        position: absolute;
-        left: calc(50% - 10px);
-        top: 25px;
-        opacity: 0;
-        visibility: hidden;
+    bottom: 0;
+    right: 0;
+    height: auto;
+    width: auto;
     
-        transition: opacity 0.2s linear, top 0.2s linear, left 0.2s linear,
-          visibility 0.2s linear;
-      }
   }
 
-  &__open{
-    display: none;
+  &__item {
+    border-radius: 50%;
+    animation: scale-out 300ms forwards;
 
-      &:clicked ~ .menu {
+    &:hover {
+      animation: scale-in 300ms forwards;
+    }
 
-        & button {
-          visibility: visible;
-          opacity: 1;
-        }
-        & button:nth-child(1) {
-          left: calc(50% - 50px);
-          top: 32px;
-        }
-        & button:nth-child(2) {
-          left: calc(50% - 37.28px);
-          top: 57.28px;
-        }
-        & button:nth-child(3) {
-          left: calc(50% - 10px);
-          top: 67px;
-        }
-      }
+    &--opened{
+    box-shadow: 0rem 0rem 1rem 0.5rem rgba($color-primary-dark, 0.2);}
   }
 
-  &__button{
-      display: block;
+  &__options {
+    position: absolute;
+    right: 0;
+    bottom:0;
+    height: 30rem;
+    width: 20rem;
+
+    div:nth-child(1) {
+      animation: move-in-1 1.5s forwards;
+    }
+    div:nth-child(2) {
+      animation: move-in-2 1s forwards;
+    }
+    div:nth-child(3) {
+      animation: move-in-3 500ms forwards;
+    }
+
+    &--close {
+      div:nth-child(1) {
+        animation: move-out-1 1s forwards;
+      }
+      div:nth-child(2) {
+        animation: move-out-2 1s forwards;
+      }
+      div:nth-child(3) {
+        animation: move-out-3 1s forwards;
+      }
+    }
+
+    &--color{
+      div:nth-child(1) {
+        background-color: rgba($color-tertiary-dark, 1);
+      }
+      div:nth-child(2) {
+        background-color: rgba($color-secondary-dark, 1);
+      }
+      div:nth-child(3) {
+        background-color: rgba($color-waves-light, 1);
+        color: rgba($color-waves-dark, .7);
+      }
+    }
+  }
+
+  &__option {
+    position: absolute;
+    bottom: 0rem;
+    right: 0rem;
+    height: 7rem;
+    width: 7rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: rgba($color-white, 1);
+    border: solid .3rem rgba($color-white, .9);
+
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-family: "Righteous", cursive;
+
+    &:hover{
+      font-size: 1.4rem;
+      cursor: pointer;
+    }
   }
 }

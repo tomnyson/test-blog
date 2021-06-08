@@ -21,6 +21,8 @@ import { BsPersonSquare } from "react-icons/bs";
 
 import Contact from "../utils/Contact";
 import Avt from "../utils/Avt";
+import Menu from "../utils/Menu";
+import Background from "../utils/Background";
 
 const skills = [
   "self taught",
@@ -45,7 +47,9 @@ const prolang = [
 
 const Resume = () => {
   return (
-    <div>
+    <Background>
+      {/* <Background /> */}
+      <Menu page="resume" />
       <div class="title">resume</div>
       <div className="resume">
         <div className="resume__middle-line"></div>
@@ -252,7 +256,7 @@ const Resume = () => {
           </div>
         </div>
       </div>
-    </div>
+    </Background>
   );
 };
 

@@ -1,46 +1,39 @@
-import React from 'react';
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 
-import Layout from '../utils/Layout'
+import Layout from "../utils/Layout";
+import Menu from "../utils/Menu";
 
 const Quotes = () => {
-    return (
-        <Layout>
-            <div className='quotes'>
-                <div className='quotes__item'>
-                    <div className='quotes__text'>
-                        be a pineapple, stand tall, wear a suit of armor lined with thorns and be sweet on the inside
-                    </div>
-                    <div className='quotes__note'>
-                        internet
-                    </div>
-                </div>
-                <div className='quotes__item'>
-                    <div className='quotes__text'>
-                        be a pineapple, stand tall, wear a suit of armor lined with thorns and be sweet on the inside
-                    </div>
-                    <div className='quotes__note'>
-                        internet
-                    </div>
-                </div>
-                <div className='quotes__item'>
-                    <div className='quotes__text'>
-                        be a pineapple, stand tall, wear a suit of armor lined with thorns and be sweet on the inside
-                    </div>
-                    <div className='quotes__note'>
-                        internet
-                    </div>
-                </div>
-                <div className='quotes__item'>
-                    <div className='quotes__text'>
-                        be a pineapple, stand tall, wear a suit of armor lined with thorns and be sweet on the inside
-                    </div>
-                    <div className='quotes__note'>
-                        internet
-                    </div>
-                </div>
-            </div>
-        </Layout>
-    );
+  const [quotes, setQuotes] = useState([]);
+
+  useEffect(() => {
+    const getData = () => {
+      return axios.get("/api/quotes").then((res) => {
+        return res.data;
+      });
+    };
+
+    getData()
+      .then((data) => setQuotes(data))
+      .catch((err) => console.error(err));
+  }, []);
+
+  const renderedQuotes = () =>
+    quotes.map((q) => {
+      return (
+        <div className="quotes__item">
+          <div className="quotes__text">{q.content}</div>
+          <div className="quotes__note">{q.author}</div>
+        </div>
+      );
+    });
+
+  return (
+    <Layout>
+      <div className="quotes">{renderedQuotes()}</div>
+    </Layout>
+  );
 };
 
 export default Quotes;

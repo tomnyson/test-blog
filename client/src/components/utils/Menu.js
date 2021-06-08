@@ -1,54 +1,63 @@
-import React from "react";
+import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 
-import { makeStyles } from "@material-ui/core/styles";
-import Avatar from "@material-ui/core/Avatar";
-import { Pages } from "@material-ui/icons";
+import Avt from "./Avt";
 
-const useStyles = makeStyles((theme) => ({
-  avatar: {
-    width: theme.spacing(7),
-    height: theme.spacing(7),
-  },
-}));
+const pages = ["home", "about", "resume", "more"];
 
-const Menu = ({ pages }) => {
-  const homeStyles = useStyles();
+const Menu = ({ page }) => {
   const history = useHistory();
+  const [openMenu, setOpenMenu] = useState(false);
+  const options = pages.filter((p) => p !== page);
+
+  const renderMenuOptions = () => {
+    return (
+      <div className="menu__options menu__options--color">
+        {options.map((p) => (
+          <div
+            className="menu__option menu__item menu__item--opened"
+            key={p}
+            onClick={() => history.push(p === "more" ? `/${p}/blogs` : (p==='home'?'/':`/${p}`))}
+          >
+            {p}
+          </div>
+        ))}
+      </div>
+    );
+  };
+
+  const closeMenuOptions = () => {
+    return (
+      <div className="menu__options--close  menu__options--color">
+        {options.map((p) => (
+          <div
+            className="menu__option menu__item"
+            key={p}
+            onClick={() => history.push(p === "more" ? `/${p}/blogs` : (p==='home'?'/':`/${p}`))}
+          >
+            {p}
+          </div>
+        ))}
+      </div>
+    );
+  };
 
   return (
     <div className="menu">
-      <label className="menu__button" for="menu__open" aria-hidden="true">
-        <span><Avatar
-          alt="avatar"
-          src="/images/avatar.jpg"
-          className={homeStyles.avatar}
-        /></span>
-      </label>
-
-      <input
-        className="menu__open"
-        id="menu__open"
-        type="checkbox"
-        aria-hidden="true"
-      />
-      <nav className="menu__nav" role="navigation">
-        <button
-          onClick={() => history.push("/")}
-          className="button button--menu"
-        >
-          home
-        </button>
-
-        {pages.map((p) => (
-          <button
-            onClick={() => history.push(p==='more'?'/blogs':`/${p}`)}
-            className="button button--menu"
+      <div className="menu__wrapper">
+        <div className="menu__position">
+          {openMenu ? renderMenuOptions() : closeMenuOptions()}
+          <div
+            className="menu__avatar menu__item menu__item--opened"
+            onClick={() => {
+              setOpenMenu(!openMenu);
+              console.log("menu button clicked");
+            }}
           >
-            {p}
-          </button>
-        ))}
-      </nav>
+            <Avt size="small" />
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

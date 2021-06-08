@@ -1,12 +1,13 @@
 @import "./variables";
-@import './grid';
-@import './pages.scss';
-@import './button';
-@import './menu.scss';
-@import './animation';
-@import './sidebar';
-@import './utils';
-
+@import "./grid";
+@import "./pages.scss";
+@import "./button";
+@import "./menu.scss";
+@import "./animation";
+@import "./sidebar";
+@import "./utils";
+@import "./mixin";
+@import "./bg";
 
 @media (max-width: 320px) {
   html {
@@ -50,8 +51,14 @@
   }
 }
 
-html{
-  background-color: $color-primary;
+html {
+  background: linear-gradient(
+      25deg,
+      rgba($color-primary, 1) 0%,
+      rgba($color-primary, 0.8) 50%,
+      rgba($color-primary, 0.5) 80%,
+      rgba(228, 183, 171, 0.1) 100%
+    ) fixed
 }
 
 *,
@@ -64,8 +71,9 @@ html{
 
 body {
   box-sizing: border-box;
-  font-family: 'Noto Sans HK', sans-serif;}
+  font-family: "Noto Sans HK", sans-serif;
+}
 
 main {
   min-height: 100vh;
-} 
+}

@@ -4,9 +4,10 @@
     width: 18vw;
     height: 100vh;
     position: fixed;
-    margin-left: 3rem;
+    margin-left: 2rem;
     padding: 0;
-    background-color: rgba($color-primary-dark, .3);
+    z-index: 0;
+    background-color: rgba($color-white,.1);
 
     &__wrapper{
         display: flex;
@@ -17,14 +18,11 @@
 
         height: auto;
         width: 100%;
+        z-index: 10;
+        // background: #000;
     }
 
     &__option{
-        background-color:rgba($color-primary-dark, .5);
-        padding: 2rem 2rem;
 
-        &:hover{
-            background-color: rgba($color-primary-dark, .3);
-        }
     }
 }

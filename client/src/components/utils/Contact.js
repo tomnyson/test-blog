@@ -1,17 +1,19 @@
 import React from 'react';
 
-import {FaFacebook, FaGithub, FaTwitter} from 'react-icons/fa'
+import {FaGithub} from 'react-icons/fa';
+import {SiCodesandbox} from 'react-icons/si';
+import {AiFillYoutube} from 'react-icons/ai'
 
 const Contact = ({icon}) => {
     return (
         <React.Fragment>
             <a
-                href="https://www.facebook.com/buichien.211/"
+                href="https://codesandbox.io/u/Bhchien211"
                 target="_blank"
                 rel="noreferrer"
                 className="button button-icon"
               >
-                <FaFacebook className={`${icon}`}/>
+                <SiCodesandbox className={`${icon}`}/>
               </a>
               <a
                 href="https://github.com/BuiHongChien"
@@ -22,12 +24,12 @@ const Contact = ({icon}) => {
                 <FaGithub className={`${icon}`}/>
               </a>
               <a
-                href="https://twitter.com/BuiChie92070547"
+                href="https://www.youtube.com/channel/UCiVHjAieLDz1C1pgatmEwbg"
                 target="_blank"
                 rel="noreferrer"
                 className="button button-icon"
               >
-                <FaTwitter className={`${icon}`}/>
+                <AiFillYoutube className={`${icon}`}/>
               </a>
             
         </React.Fragment>

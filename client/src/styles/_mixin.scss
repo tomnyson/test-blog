@@ -1,0 +1,75 @@
+@import "./variables";
+
+@mixin scale-out-animation($name, $scale) {
+  @keyframes #{$name} {
+    0% {
+      transform: scale($scale);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+}
+
+@mixin scale-in-animation($name, $scale) {
+  @keyframes #{$name} {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale($scale);
+    }
+  }
+}
+
+@mixin move-in-animation($name, $translate) {
+  @keyframes #{$name} {
+    10% {
+      box-shadow: 0rem 0rem 1rem 0.5rem rgba($color-primary-dark, 0.3);
+    }
+    100% {
+      transform: translateY($translate);
+    }
+  }
+}
+
+@mixin move-out-animation($name, $translate) {
+  @keyframes #{$name} {
+    0% {
+      transform: translateY($translate);
+      box-shadow: 0rem 0rem 1rem 0.5rem rgba($color-primary-dark, 0.3);
+    }
+    90% {
+      box-shadow: 0rem 0rem 1rem 0.5rem rgba($color-primary-dark, 0.3);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+}
+
+@mixin item-move($nth,$animation-name, $duration, $top, $left) {
+  div:nth-child(#{$nth}) {
+    position: absolute;
+    top: $top;
+    left:$left ;
+    animation: $animation-name 15s $duration linear infinite;
+  }
+} 
+
+@mixin move-cross-animation($name, $translateX-to,$translateY-to,$deg) {
+  @keyframes #{$name} {
+    0% {
+      transform: rotate(-5deg);
+    }
+    30% {
+      // transform: rotate(-5deg);
+    }
+    60% {
+      // transform: rotate(0deg) ;
+    }
+    100% {
+      transform: translateX($translateX-to) translateY($translateY-to) rotate($deg);
+    }
+  }
+}
