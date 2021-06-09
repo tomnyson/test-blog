@@ -25,7 +25,7 @@ import Menu from "../utils/Menu";
 import Background from "../utils/Background";
 
 const skills = [
-  "self taught",
+  "self-studying",
   "problems solving and logical thinking",
   "multitasking skills",
   "time management skills",
@@ -167,8 +167,8 @@ const Resume = () => {
               </div>
               <div className="resume__inline resume__inline--start">
                 <BsPersonSquare className="icon icon--small" />
-                <a href="" target="_blank" rel="noreferrer" className="link">
-                  Personal website (React)
+                <a href="https://github.com/BuiHongChien/blog" target="_blank" rel="noreferrer" className="link">
+                  Personal website (MERN)
                 </a>
               </div>
             </div>

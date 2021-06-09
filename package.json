@@ -1,6 +1,7 @@
 {
     "scripts": {
-        "dev": "concurrently \"cd server && yarn run dev\" \"cd client && yarn start\" "
+        "dev": "concurrently \"cd server && yarn run dev\" \"cd client && yarn start\" ",
+        "heroku-postbuild":"NPM_CONFIG_PRODUCTION=false yarn add --prefix client && yarn run build --prefix client"
     },
     "dependencies": {
         "concurrently": "^6.1.0"

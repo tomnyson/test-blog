@@ -5,9 +5,10 @@ const { urlencoded } = require("body-parser");
 require("dotenv").config();
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
+const path = require("path");
 
 const app = express();
-app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 mongoose.Promise = global.Promise;
@@ -22,7 +23,6 @@ const { Quote } = require("./models/Quote");
 
 // Middleware
 const { auth } = require("./middleware/auth");
-
 
 // @route    POST /api/admin/login
 // @desc     admin logins to be allowed manager
@@ -115,7 +115,17 @@ app.post("/api/admin/quotes", auth, (req, res) => {
     else res.status(200).json({ success: true, doc });
   });
 });
-//***********************************************\
+//***********************************************
+
+// Server static assets if in production
+if (process.env.NODE_ENV === "production") {
+  // Set static folder
+  app.use(express.static("client/build"));
+
+  app.get("*", (req, res) => {
+    res.sendFile(path.resolve(_dirname, "client", "build", "index.html"));
+  });
+}
 
 const port = process.env.PORT || 5000;
 
