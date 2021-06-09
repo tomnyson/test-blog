@@ -120,10 +120,10 @@ app.post("/api/admin/quotes", auth, (req, res) => {
 // Server static assets if in production
 if (process.env.NODE_ENV === "production") {
   // Set static folder
-  app.use(express.static("client/build"));
+  app.use(express.static(path.resolve(_dirname, "../client/build")));
 
   app.get("*", (req, res) => {
-    res.sendFile(path.resolve(_dirname, "client", "build", "index.html"));
+    res.sendFile(path.resolve(_dirname, "../client/build", "index.html"));
   });
 }
 

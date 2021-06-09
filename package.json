@@ -1,8 +1,10 @@
 {
     "scripts": {
-        "dev": "concurrently \"cd server && yarn run dev\" \"cd client && yarn start\" ",
-        "heroku-postbuild":"NPM_CONFIG_PRODUCTION=false yarn add --prefix client && yarn run build --prefix client"
+        "client-install":"cd client && npm install",
+        "dev": "concurrently \"cd server && npm run dev\" \"cd client && npm start\" ",
+        "heroku-postbuild":"npm run install-client && npm run build"
     },
+    "license": "BHC",
     "dependencies": {
         "concurrently": "^6.1.0"
     }
