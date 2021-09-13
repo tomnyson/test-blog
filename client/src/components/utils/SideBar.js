@@ -12,9 +12,7 @@ const SideBar = ({ barOptions }) => {
             <button
               className="button button--side-bar"
               onClick={() => {
-                // console.log('button was clicked!')
                 history.push(`/more/${o}`);
-
               }}
             >
               {o}

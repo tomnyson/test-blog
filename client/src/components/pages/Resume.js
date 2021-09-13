@@ -47,7 +47,8 @@ const prolang = [
 
 const Resume = () => {
   return (
-    <Background>
+    <div >
+    <Background></Background>
       {/* <Background /> */}
       <Menu page="resume" />
       <div class="title">resume</div>
@@ -256,7 +257,7 @@ const Resume = () => {
           </div>
         </div>
       </div>
-    </Background>
+    </div>
   );
 };
 

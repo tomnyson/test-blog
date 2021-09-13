@@ -2,9 +2,8 @@
 @import "./animation";
 
 .quotes{
-  height: auto;
-  min-height: 100vh;
-  margin-left: 21%;
+  height: 100%;
+  width: 100%;
   padding: 6rem 8rem 4rem 8rem;
 
   display: flex;
@@ -13,7 +12,7 @@
 
   &__item{
     position: relative;
-    width: 100%;
+    width: auto;
     height: auto;
     padding: 2rem 3rem 6rem 3rem;
 
@@ -44,39 +43,40 @@
 }
 
 .blogs {
-  height: auto;
-  min-height: 100vh;
-  margin-left: 21%;
-  padding: 2rem 3rem;
+  height: 100%;
+  padding: 4rem 5rem;
 
   &__item {
     position: relative;
-    background-color: transparent;
+    background-color: rgba($color-white, 0.9);
     box-shadow: 0 0rem 2rem 1rem rgba($color-primary-dark, 0.1);
+    padding: 2.5rem 2.5rem;
 
-    border-radius: 1rem;
     cursor: pointer;
     text-transform: capitalize;
 
-    height: 20rem;
+    height: 30rem;
+    padding-top: 2rem;
     animation: scale-out-1 500ms ease-in-out forwards;
+
+    display: block;
 
     &:hover {
       animation: scale-in-1 500ms ease-in-out forwards;
     }
   }
 
-  &__title {
-    position: absolute;
-    bottom: 5%;
-    left: -2%;
+  &__link{
+    text-decoration: none;
+  }
 
-    height: auto;
-    max-height: 30%;
-    width: 104%;
-    padding: 0.3rem 2rem;
-    font-size: 2rem;
-    font-family: 'Signika', sans-serif;
+  &__title {
+    width: 100%;
+    height: 30%;
+    padding-top: 1rem;
+    
+    font-size: 1.8rem;
+    font-family: 'Bad Script', cursive;
 
     white-space: pre-wrap;
     overflow: hidden; // ẩn các nội dung khi kích thước lớn hơn chiều rộng khối bên ngoài
@@ -85,22 +85,15 @@
     -webkit-box-orient: vertical;
     display: -webkit-box;
 
-    background-color: rgba($color-white, .8);
-    color: rgba($color-primary-dark, 1);
-    box-shadow: 0rem -0.5rem 0.5rem rgba($color-primary-dark, 0.2);
+    color: rgba($color-secondary-dark-1, 1);
   }
 
   &__image {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    height: 100%;
+    height: 70%;
     width: 100%;
-    border-radius: 1rem;
-  }
-
-  &__image-wrapper {
-    background-image: linear-gradient($color-white, 0.2);
   }
 }
 
@@ -149,14 +142,15 @@
   position: relative;
 
   margin: 2rem 3rem;
-  font-size: 1.8rem;
+  font-size: 2rem;
   padding: 10rem 3rem;
   border-radius: 1rem;
+  font-family: 'EB Garamond', serif;
 
   color: rgba($color-waves-dark, 1);
-  background-color: rgba($color-white, 0.65 );
+  background-color: rgba($color-white, .5 );
   
-  height: auto;
+  height: 100%;
 
   &__middle-line {
     position: absolute;
@@ -245,11 +239,11 @@
   &__detail {
     text-align: left !important;
     padding-left: 2rem;
-    background-color: rgba($color-primary-light, 0.5);
+    background-color: rgba($color-primary-light, 0.9);
     padding: 1.5rem 2.5rem;
 
     &--education {
-      background-color: rgba($color-white, 0.1);
+      background-color: rgba($color-white, 0.3);
       padding: 1rem 2rem;
     }
 

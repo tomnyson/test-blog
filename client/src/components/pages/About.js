@@ -18,7 +18,7 @@ const About = () => {
             <br></br>&emsp;&emsp;I'm a 3rd-year student at ITMO (Information
             Technologies, Mechanics and Optics) university in St.Petersburg,
             Russia.
-            <br></br>&emsp;&emsp; I'm majoring in programming and internet technologies.I
+            <br></br>&emsp;&emsp; I'm majoring in programming and internet technologies.I'm
             highly interested in JavaScript, therefore I'm learning Front-end
             developments  looking forward to becoming a Front-end web designer. To gain more skills, I'm joining web projects and internships
             <br></br>

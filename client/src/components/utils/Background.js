@@ -18,12 +18,11 @@ const Background = (props) => {
     <Fragment>
       <div className="bg">
         <div className="bg__dandelions">
-          {" "}
           <img src={Dandelions} className="bg__dandelions--0" />
+          <div className="bg__wrapper">{items}</div>
         </div>
-        <div className="bg__wrapper">{items}</div>
+        {/* <div className='bg__content'>{props.children}</div> */}
       </div>
-      {props.children}
     </Fragment>
   );
 };

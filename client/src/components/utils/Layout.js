@@ -7,19 +7,18 @@ import Background from "../utils/Background";
 const barOptions = ["quotes", "blogs"];
 
 const Layout = (props) => {
-  return (
-    <Background>
+  return (<div>
+    <Background></Background>
       <div className="layout">
         <Menu page="more" />
-        <div style={{ position: "fixed" }}>
+        <div >
           <div className="title title--more">More</div>
         </div>
         <div className="layout__wrapper">
           <SideBar barOptions={barOptions} />
           <div className="layout__main">{props.children}</div>
         </div>
-      </div>
-    </Background>
+      </div></div>
   );
 };
 

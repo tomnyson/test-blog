@@ -12,107 +12,101 @@
   top: 0;
   color: transparent;
   z-index: -100;
-  
+
   &__dandelions {
-    & img {
-      opacity: 0.6;
-      position: absolute;
-      bottom: 0;
-      z-index: -100;
-    }
+    position: relative;
+    height: 100vh;
+    width: 100vw;
 
     &--0 {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      opacity: 0.6;
       height: 25rem;
       width: 25rem;
-      z-index: -100;
+      // z-index: ;
     }
 
     &--1 {
+      opacity: 0.6;
       height: 4.5rem;
       width: 3rem;
-      z-index: -100;
     }
   }
 
-  &__content {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
-  }
-
   &__item {
+    z-index: 10;
   }
 
   &__wrapper {
     position: relative;
     opacity: 0.5;
-    z-index: -100;
 
     @include item-move(1, move-cross1, 1s, 40vh, -5vw);
     @include item-move(2, move-cross2, 0.5s, 50vh, -5vw);
-    @include item-move(3, move-cross3, 1.3s,60vh, -5vw);
-    @include item-move(4, move-cross4, 0.6s,70vh, -5vw);
-    @include item-move(5, move-cross5, 1.4s,80vh, -5vw);
-    @include item-move(6, move-cross6, 1s,90vh, -5vw);
-    @include item-move(7, move-cross7, 1s,90vh, -5vw);
-    @include item-move(8, move-cross7, 1.8s,105vh, 10vw);
-    @include item-move(9, move-cross11, 0.7s,105vh, 50vw);
+    @include item-move(3, move-cross3, 1.3s, 60vh, -5vw);
+    @include item-move(4, move-cross4, 0.6s, 70vh, -5vw);
+    @include item-move(5, move-cross5, 1.4s, 80vh, -5vw);
+    @include item-move(6, move-cross6, 1s, 90vh, -5vw);
+    @include item-move(7, move-cross7, 1s, 90vh, -5vw);
+    @include item-move(8, move-cross7, 1.8s, 105vh, 10vw);
+    @include item-move(9, move-cross11, 0.7s, 105vh, 50vw);
 
     @include item-move(10, move-cross1, 7s, 40vh, -5vw);
-    @include item-move(11, move-cross3, 7.3s,60vh, -5vw);
-    @include item-move(12, move-cross4, 6.6s,70vh, -5vw);
-    @include item-move(17, move-cross5, 7.4s,80vh, -5vw);
-    @include item-move(18, move-cross6, 7s,90vh, -5vw);
-    @include item-move(19, move-cross7, 6.8s,105vh, 10vw);
-    @include item-move(23, move-cross11, 7.7s,105vh, 50vw);
-    @include item-move(24, move-cross12, 8.2s,105vh, 60vw);
+    @include item-move(11, move-cross3, 7.3s, 60vh, -5vw);
+    @include item-move(12, move-cross4, 6.6s, 70vh, -5vw);
+    @include item-move(17, move-cross5, 7.4s, 80vh, -5vw);
+    @include item-move(18, move-cross6, 7s, 90vh, -5vw);
+    @include item-move(19, move-cross7, 6.8s, 105vh, 10vw);
+    @include item-move(23, move-cross11, 7.7s, 105vh, 50vw);
+    @include item-move(24, move-cross12, 8.2s, 105vh, 60vw);
 
     @include item-move(25, move-cross1, 3s, 40vh, -5vw);
-    @include item-move(27, move-cross3, 3.8s,60vh, -5vw);
-    @include item-move(28, move-cross4, 2.1s,70vh, -5vw);
-    @include item-move(29, move-cross5, 3.5s,80vh, -5vw);
-    @include item-move(30, move-cross6, 3s,90vh, -5vw);
-    @include item-move(31, move-cross7, 2.5s,105vh, 10vw);
-    @include item-move(35, move-cross11, 3.6s,105vh, 50vw);
-    @include item-move(36, move-cross12, 4.2s,105vh, 60vw);
+    @include item-move(27, move-cross3, 3.8s, 60vh, -5vw);
+    @include item-move(28, move-cross4, 2.1s, 70vh, -5vw);
+    @include item-move(29, move-cross5, 3.5s, 80vh, -5vw);
+    @include item-move(30, move-cross6, 3s, 90vh, -5vw);
+    @include item-move(31, move-cross7, 2.5s, 105vh, 10vw);
+    @include item-move(35, move-cross11, 3.6s, 105vh, 50vw);
+    @include item-move(36, move-cross12, 4.2s, 105vh, 60vw);
 
     @include item-move(37, move-cross1, 9.3s, 40vh, -5vw);
     @include item-move(38, move-cross2, 8.1s, 50vh, -5vw);
-    @include item-move(39, move-cross3, 9s,60vh, -5vw);
-    @include item-move(40, move-cross4, 8.6s,70vh, -5vw);
-    @include item-move(41, move-cross5, 9.5s,80vh, -5vw);
-    @include item-move(42, move-cross6, 9.1s,90vh, -5vw);
-    @include item-move(43, move-cross7, 8.8s,105vh, 10vw);
-    @include item-move(46, move-cross10, 10s,105vh, 40vw);
-    @include item-move(47, move-cross11, 9.2s,105vh, 50vw);
+    @include item-move(39, move-cross3, 9s, 60vh, -5vw);
+    @include item-move(40, move-cross4, 8.6s, 70vh, -5vw);
+    @include item-move(41, move-cross5, 9.5s, 80vh, -5vw);
+    @include item-move(42, move-cross6, 9.1s, 90vh, -5vw);
+    @include item-move(43, move-cross7, 8.8s, 105vh, 10vw);
+    @include item-move(46, move-cross10, 10s, 105vh, 40vw);
+    @include item-move(47, move-cross11, 9.2s, 105vh, 50vw);
 
     @include item-move(49, move-cross1, 5.3s, 40vh, -5vw);
     @include item-move(50, move-cross2, 4.5s, 50vh, -5vw);
-    @include item-move(51, move-cross3, 5.4s,60vh, -5vw);
-    @include item-move(52, move-cross4, 4.2s,70vh, -5vw);
-    @include item-move(53, move-cross5, 5.8s,80vh, -5vw);
-    @include item-move(54, move-cross6, 5.2s,90vh, -5vw);
-    @include item-move(55, move-cross7, 4.4s,105vh, 10vw);
-    @include item-move(59, move-cross11, 5.7s,105vh, 50vw);
+    @include item-move(51, move-cross3, 5.4s, 60vh, -5vw);
+    @include item-move(52, move-cross4, 4.2s, 70vh, -5vw);
+    @include item-move(53, move-cross5, 5.8s, 80vh, -5vw);
+    @include item-move(54, move-cross6, 5.2s, 90vh, -5vw);
+    @include item-move(55, move-cross7, 4.4s, 105vh, 10vw);
+    @include item-move(59, move-cross11, 5.7s, 105vh, 50vw);
     @include item-move(58, move-cross1, 0.3s, 40vh, -5vw);
 
     @include item-move(57, move-cross1, 11.3s, 40vh, -5vw);
-    @include item-move(56, move-cross3, 11s,60vh, -5vw);
-    @include item-move(48, move-cross4, 10.4s,70vh, -5vw);
-    @include item-move(45, move-cross5, 11.5s,80vh, -5vw);
-    @include item-move(44, move-cross6, 11.3s,90vh, -5vw);
-    @include item-move(34, move-cross7, 10.8s,105vh, 10vw);
-    @include item-move(33, move-cross11, 11.26s,105vh, 50vw);
-    @include item-move(32, move-cross12, 12.1s,105vh, 60vw);
+    @include item-move(56, move-cross3, 11s, 60vh, -5vw);
+    @include item-move(48, move-cross4, 10.4s, 70vh, -5vw);
+    @include item-move(45, move-cross5, 11.5s, 80vh, -5vw);
+    @include item-move(44, move-cross6, 11.3s, 90vh, -5vw);
+    @include item-move(34, move-cross7, 10.8s, 105vh, 10vw);
+    @include item-move(33, move-cross11, 11.26s, 105vh, 50vw);
+    @include item-move(32, move-cross12, 12.1s, 105vh, 60vw);
 
     @include item-move(13, move-cross1, 13.3s, 40vh, -5vw);
     @include item-move(14, move-cross2, 12.1s, 50vh, -5vw);
-    @include item-move(15, move-cross3, 13s,60vh, -5vw);
-    @include item-move(16, move-cross4, 12.3s,70vh, -5vw);
-    @include item-move(20, move-cross5, 13.2s,80vh, -5vw);
-    @include item-move(21, move-cross6, 13.5s,90vh, -5vw);
-    @include item-move(22, move-cross7, 12.8s,105vh, 10vw);
-    @include item-move(26, move-cross11, 13.4s,105vh, 50vw);
+    @include item-move(15, move-cross3, 13s, 60vh, -5vw);
+    @include item-move(16, move-cross4, 12.3s, 70vh, -5vw);
+    @include item-move(20, move-cross5, 13.2s, 80vh, -5vw);
+    @include item-move(21, move-cross6, 13.5s, 90vh, -5vw);
+    @include item-move(22, move-cross7, 12.8s, 105vh, 10vw);
+    @include item-move(26, move-cross11, 13.4s, 105vh, 50vw);
   }
 }

@@ -24,21 +24,21 @@ const Blogs = () => {
     blogs.map((b) => {
       console.log(b);
       return (
-        <a 
+        <a
+          // <Link to={`/more/blogs/${b._id}`} > UPDATE LATER!!!
 
-        // <Link to={`/more/blogs/${b._id}`} > UPDATE LATER!!!
-        
-        href={b.url}
-        target="__blank"
+          href={b.url}
+          target="__blank"
+          className='blogs__link'
         >
           <div className="blogs__item">
-            <div className="blogs__title">{b.title}</div>
             <div
               className="blogs__image"
               style={{
                 backgroundImage: `linear-gradient(to right, #ffffff40, #ffffff10), url(/images/${b.img}.jpg)`,
               }}
             />
+            <div className="blogs__title">{b.title}</div>
           </div>
         </a>
       );
@@ -46,8 +46,8 @@ const Blogs = () => {
 
   return (
     <Layout>
-      <div className="blogs">
-        <div className="grid grid--blogs">{renderedBlogs()}</div>
+        <div className="blogs">
+          <div className="grid grid--blogs">{renderedBlogs()}</div>
       </div>
     </Layout>
   );

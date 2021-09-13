@@ -1,5 +1,6 @@
 @import "./variables";
 @import "./grid";
+@import './layout';
 @import "./pages.scss";
 @import "./button";
 @import "./menu.scss";
@@ -55,8 +56,9 @@ html {
   background: linear-gradient(
       25deg,
       rgba($color-primary, 1) 0%,
-      rgba($color-primary, 0.8) 50%,
-      rgba($color-primary, 0.5) 80%,
+      rgba($color-primary, 1) 50%,
+      rgba($color-primary, 1) 80%,
+      // rgba($color-primary-light, 1) 90%,
       rgba(228, 183, 171, 0.1) 100%
     ) fixed
 }

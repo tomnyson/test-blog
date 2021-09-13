@@ -1,0 +1,17 @@
+@import "./variables";
+
+.layout {
+  &__main {
+    position: absolute;
+    top: 0;
+    left: calc(18vw + 2rem);
+    width: calc(100vw - 18vw - 5.5rem);
+    height: auto;
+    min-height: 100vh;
+  }
+
+  &__wrapper {
+    height: auto;
+    width: 100vw;
+  }
+}
