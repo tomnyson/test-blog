@@ -1,6 +1,6 @@
 {
   "engines": {
-    "node": "14.17.6"
+    "node": "v16.10.0"
   },
   "dependencies": {
     "bcrypt": "^5.0.1",
@@ -17,11 +17,8 @@
   "scripts": {
     "start": "node server.js",
     "start:dev": "nodemon server.js"
-<<<<<<< HEAD
   },
   "devDependencies": {
     "concurrently": "^6.3.0"
-=======
->>>>>>> a728c2138413184d811e9f43249f02b7eb012513
   }
 }
