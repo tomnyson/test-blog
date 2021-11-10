@@ -26,6 +26,10 @@ const { auth } = require("./middleware/auth");
 // @route    POST /api/admin/login
 // @desc     admin logins to be allowed manager
 // @access   private
+app.use(express.static("../client/build/"));
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "../client/build", "index.html"));
+});
 app.post("/api/admin/login", async (req, res) => {
   try {
     const { password } = req.body;
@@ -61,7 +65,7 @@ app.post("/api/admin/login", async (req, res) => {
 // @access   public
 app.get("/api/test", async (req, res) => {
   try {
-    return json.status(200).json({ message: "ok" });
+    return res.status(200).json({ message: "ok" });
   } catch (err) {
     console.error(err.message);
     res.status(500).send("Server blogs error");
