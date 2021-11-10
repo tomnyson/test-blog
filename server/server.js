@@ -6,8 +6,8 @@ const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const path = require("path");
 
-require("dotenv").config({path:__dirname+'/.env'});
-const {connectDB}=require('./config/db')
+require("dotenv").config({ path: __dirname + "/.env" });
+const { connectDB } = require("./config/db");
 connectDB();
 
 const app = express();
@@ -59,6 +59,14 @@ app.post("/api/admin/login", async (req, res) => {
 // @route    GET /api/blogs
 // @desc     get all blogs
 // @access   public
+app.get("/api/test", async (req, res) => {
+  try {
+    return json.status(200).json({ message: "ok" });
+  } catch (err) {
+    console.error(err.message);
+    res.status(500).send("Server blogs error");
+  }
+});
 app.get("/api/blogs", async (req, res) => {
   try {
     Blog.find().exec((err, doc) => {
@@ -126,7 +134,7 @@ if (process.env.NODE_ENV === "production") {
   });
 }
 
-mongoose.connect(process.env.DB_URI).then(()=>console.log("connected DB"))
+mongoose.connect(process.env.DB_URI).then(() => console.log("connected DB"));
 
 const port = process.env.PORT || 5000;
 
