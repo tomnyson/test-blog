@@ -3,5 +3,10 @@
   "routes": {
     "/**": "index.html"
   },
+  "proxies": {
+    "/api/": {
+      "origin": "https://blog-demo-chien.herokuapp.com"
+    }
+  },
   "https_only": true
 }
