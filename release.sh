@@ -1,2 +1,2 @@
 ls
-cd server && npm install
+cd server && npm install && yarn:start
