@@ -1,20 +1,24 @@
 {
+  "engines": {
+    "node": "14.17.6"
+  },
   "dependencies": {
     "bcrypt": "^5.0.1",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
-    "concurrently": "^6.0.2",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.12.7",
     "nodemon": "^2.0.14",
     "swagger-jsdoc": "^7.0.0-rc.6",
-    "swagger-ui-express": "^4.1.6",
-    "yarn": "^1.22.17"
+    "swagger-ui-express": "^4.1.6"
   },
   "scripts": {
     "start": "node server.js",
-    "dev": "nodemon server.js"
+    "start:dev": "nodemon server.js"
+  },
+  "devDependencies": {
+    "concurrently": "^6.3.0"
   }
 }
