@@ -3,9 +3,12 @@
   "routes": {
     "/**": "index.html"
   },
-  "proxies": {
-    "/api/": {
-      "origin": "https://blog-demo-chien.herokuapp.com"
+  "proxy": {
+    "/api": {
+      "target": "http://localhost:5000",
+      "pathRewrite": {
+        "^/api": "/"
+      }
     }
   },
   "https_only": true
