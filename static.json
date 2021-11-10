@@ -5,7 +5,7 @@
   },
   "proxy": {
     "/api": {
-      "target": "https://blog-demo-chien.herokuapp/api",
+      "target": "http://localhost:5000",
       "pathRewrite": {
         "^/api": "/"
       }
