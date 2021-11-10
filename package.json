@@ -3,10 +3,10 @@
     "build": "cd client && npm run build",
     "install-client": "cd client && npm install",
     "install-server": "cd server && npm install",
-    "heroku-postbuild": "npm run install-client && npm run build && install-server",
+    "heroku-postbuild": "npm run install-client && npm run build",
     "server": "cd server && npm start",
     "develop": "concurrently --kill-others-on-fail \"npm run server\" \"npm run start --prefix client\"",
-    "start": "npm run server"
+    "start": "npm run server:dev"
   },
   "license": "BHC",
   "dependencies": {
